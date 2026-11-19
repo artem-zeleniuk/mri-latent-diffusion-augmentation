@@ -1,0 +1,285 @@
+LOAD_PRETRAINED_UNET=True - skipping Stage 1, the fine-tuned UNet checkpoint downloaded by the quickstart is reused unchanged.
+LOAD_PRETRAINED_UNET=True - skipping Stage 2. The synthetic volumes of the reported classifiers are not downloaded by the quickstart.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 3, the summary cells below use the stored results in ./weights/.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 4, the stored DeLong results in ./weights/ feed the summary cells below.
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+  preloading 382 volumes to RAM (target (160, 220, 160))...
+    200/382  elapsed 51s  RAM=2.1GB
+  preload done in 99s, RAM 4.01GB, skipped 0
+
+=== eval baseline  (/root/work/cls/best_baseline.pt) ===
+  AUC=0.8284  bACC=0.7237  N=382
+
+=== eval A  (/root/work/cls/best_A.pt) ===
+  AUC=0.8044  bACC=0.6502  N=382
+
+=== eval R  (/root/work/cls/best_R.pt) ===
+  AUC=0.8403  bACC=0.7178  N=382
+
+=== eval S  (/root/work/cls/best_S.pt) ===
+  AUC=0.7840  bACC=0.7045  N=382
+
+=== eval T  (/root/work/cls/best_T.pt) ===
+  AUC=0.7480  bACC=0.7077  N=382
+
+
+DELONG PAIRED TESTS
+
+A vs baseline:
+  AUC baseline: 0.8284
+  AUC A: 0.8044
+  Δ:    -0.0240
+  SE:   0.0188   z: -1.275
+  p (two-sided): 0.2024   significant @ 0.05: False
+
+R vs baseline:
+  AUC baseline: 0.8284
+  AUC R: 0.8403
+  Δ:    +0.0118
+  SE:   0.0111   z: 1.064
+  p (two-sided): 0.2872   significant @ 0.05: False
+
+S vs baseline:
+  AUC baseline: 0.8284
+  AUC S: 0.7840
+  Δ:    -0.0444
+  SE:   0.0216   z: -2.059
+  p (two-sided): 0.0395   significant @ 0.05: True
+
+T vs baseline:
+  AUC baseline: 0.8284
+  AUC T: 0.7480
+  Δ:    -0.0804
+  SE:   0.0252   z: -3.187
+  p (two-sided): 0.0014   significant @ 0.05: True
+
+Saved: /root/work/private/delong_results.json
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+{
+ "auc": {
+  "baseline": {
+   "auc": 0.8284485784485784,
+   "ci95": [
+    0.7603207509013956,
+    0.8884733327011507
+   ]
+  },
+  "A": {
+   "auc": 0.8044489294489295,
+   "ci95": [
+    0.7252639574782807,
+    0.8701140988277487
+   ]
+  },
+  "R": {
+   "auc": 0.8402948402948403,
+   "ci95": [
+    0.770714518409476,
+    0.8990257947269609
+   ]
+  },
+  "S": {
+   "auc": 0.7840031590031589,
+   "ci95": [
+    0.706951455018039,
+    0.8570025528567315
+   ]
+  },
+  "T": {
+   "auc": 0.7480256230256229,
+   "ci95": [
+    0.6680317783740001,
+    0.824952913707315
+   ]
+  }
+ },
+ "difference": {
+  "A_minus_baseline": {
+   "delta": -0.023999648999648904,
+   "ci95": [
+    -0.07158711466287326,
+    0.018351285730314845
+   ],
+   "se": 0.02226337447331067,
+   "p_two_sided": 0.26
+  },
+  "R_minus_baseline": {
+   "delta": 0.011846261846261807,
+   "ci95": [
+    -0.015567441604785742,
+    0.04105249748970951
+   ],
+   "se": 0.014285391709926794,
+   "p_two_sided": 0.426
+  },
+  "S_minus_baseline": {
+   "delta": -0.044445419445419576,
+   "ci95": [
+    -0.10175470330687122,
+    0.010539745253728073
+   ],
+   "se": 0.02881120457134389,
+   "p_two_sided": 0.116
+  },
+  "T_minus_baseline": {
+   "delta": -0.08042295542295552,
+   "ci95": [
+    -0.14192853018927215,
+    -0.019491728210160385
+   ],
+   "se": 0.030554629994692127,
+   "p_two_sided": 0.006
+  },
+  "A_minus_R": {
+   "delta": -0.03584591084591071,
+   "ci95": [
+    -0.08397104927438652,
+    0.007226470637640118
+   ],
+   "se": 0.023308715078627376,
+   "p_two_sided": 0.109
+  },
+  "A_minus_S": {
+   "delta": 0.020445770445770672,
+   "ci95": [
+    -0.06277024164665101,
+    0.10060954378630092
+   ],
+   "se": 0.04133358862884439,
+   "p_two_sided": 0.624
+  }
+ }
+}
+eval block test_extended: done in 67s
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+eval block synthetic: done in 117s
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+eval block real_reference: done in 418s
+eval block counterfactual: done in 10s
+{
+ "baseline_classifier_p_ad": {
+  "ad_mean": 0.13938250054977835,
+  "cn_mean": 0.04526272298768163,
+  "ad_sd": 0.2411465666084789,
+  "cn_sd": 0.10417138873605011,
+  "cohen_d": 0.506711567220132,
+  "auc_ad_higher": 0.732329
+ },
+ "baseline_classifier_share_called_ad": {
+  "cn": 0.018,
+  "ad": 0.105
+ },
+ "baseline_classifier_p_ad_without_limit": {
+  "ad_mean": 0.07465088227763772,
+  "cn_mean": 0.033614788663884,
+  "ad_sd": 0.1313682444818861,
+  "cn_sd": 0.0414772899432868,
+  "cohen_d": 0.42126560637413785,
+  "auc_ad_higher": 0.7173444444444445,
+  "n_per_class": 300
+ },
+ "proxies_n_per_class": 100,
+ "csf_c": {
+  "ad_mean": 0.12857409261172822,
+  "cn_mean": 0.08091134396796694,
+  "ad_sd": 0.048493555758844044,
+  "cn_sd": 0.0335796731148239,
+  "cohen_d": 1.1427551147678867,
+  "auc_ad_higher": 0.7919
+ },
+ "mean_c": {
+  "ad_mean": 1.1182244694232941,
+  "cn_mean": 1.1798386406898498,
+  "ad_sd": 0.08295077030312445,
+  "cn_sd": 0.06161093418922203,
+  "cohen_d": -0.8432887887149477,
+  "auc_ad_higher": 0.2725
+ },
+ "tissue": {
+  "ad_mean": 0.41957961600167415,
+  "cn_mean": 0.422187775530134,
+  "ad_sd": 0.03256438835173104,
+  "cn_sd": 0.029017830281252925,
+  "cohen_d": -0.08456483384927722,
+  "auc_ad_higher": 0.4726
+ },
+ "synthetic_ad_p_ad_by_cdr": {
+  "0.5": {
+   "n": 760,
+   "mean_p_ad": 0.11819186989267014,
+   "share_called_ad": 0.08289473684210526
+  },
+  "1.0": {
+   "n": 219,
+   "mean_p_ad": 0.19885743856770263,
+   "share_called_ad": 0.1643835616438356
+  },
+  "2.0": {
+   "n": 21,
+   "mean_p_ad": 0.2860428754772459,
+   "share_called_ad": 0.2857142857142857
+  }
+ },
+ "spearman_p_ad_with_conditioning": {
+  "all_synthetic": {
+   "sex": 0.35213277108079016,
+   "age": 0.5573632981431385,
+   "cdr": 0.41046071708270826,
+   "mmse": -0.31962996224222084
+  },
+  "synthetic_cn": {
+   "sex": 0.3173267792483339,
+   "age": 0.48737685916914814,
+   "mmse": -0.10311112578562674
+  },
+  "synthetic_ad": {
+   "sex": 0.275565817583576,
+   "age": 0.4702259619031665,
+   "cdr": 0.14247032657668313,
+   "mmse": -0.17289666944650062
+  }
+ },
+ "real_validation_reference": {
+  "n": 397,
+  "n_ad": 69,
+  "real": {
+   "ad_mean": 0.5537597285988538,
+   "cn_mean": 0.13309707572660978,
+   "ad_sd": 0.3843964116908914,
+   "cn_sd": 0.2442958205712931,
+   "cohen_d": 1.306175712065984,
+   "auc_ad_higher": 0.827633439377872
+  },
+  "reconstructed": {
+   "ad_mean": 0.45887330646856106,
+   "cn_mean": 0.10159178693188219,
+   "ad_sd": 0.3802436877260838,
+   "cn_sd": 0.20935689129404214,
+   "cohen_d": 1.1640379954942701,
+   "auc_ad_higher": 0.8315659243548957
+  },
+  "share_called_ad_real": {
+   "cn": 0.10060975609756098,
+   "ad": 0.6086956521739131
+  },
+  "share_called_ad_reconstructed": {
+   "cn": 0.0701219512195122,
+   "ad": 0.4782608695652174
+  },
+  "spearman_real_against_reconstructed": 0.9633030813175871,
+  "proxies_real": {
+   "csf_c": {
+    "ad_mean": 0.1461780089030659,
+    "cn_mean": 0.1214681160844239,
+    "ad_sd": 0.05539444258746497,
+    "cn_sd": 0.13073502519042943,
+    "cohen_d": 0.24611525722
+STAGE eval baseline finished in 752s

@@ -1,0 +1,89 @@
+LOAD_PRETRAINED_UNET=True - skipping Stage 1, the fine-tuned UNet checkpoint downloaded by the quickstart is reused unchanged.
+LOAD_PRETRAINED_UNET=True - skipping Stage 2. The synthetic volumes of the reported classifiers are not downloaded by the quickstart.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 3, the summary cells below use the stored results in ./weights/.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 4, the stored DeLong results in ./weights/ feed the summary cells below.
+
+=== scheme: R ===
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+synth: CN=1000 AD=1000
+  preloading 397 volumes to RAM (target (160, 220, 160))...
+    200/397  elapsed 52s  RAM=2.1GB
+  preload done in 109s, RAM 4.16GB, skipped 0
+  preloading 382 volumes to RAM (target (160, 220, 160))...
+    200/382  elapsed 55s  RAM=2.1GB
+  preload done in 106s, RAM 4.01GB, skipped 0
+
+class weights: CN=0.626 AD=2.484
+
+--- train on 1674 items (real=1674, synth=0), 3674 items per epoch ---
+  preloading 1674 volumes to RAM (target (160, 220, 160))...
+    200/1674  elapsed 55s  RAM=2.1GB
+    400/1674  elapsed 102s  RAM=4.2GB
+    600/1674  elapsed 153s  RAM=6.3GB
+    800/1674  elapsed 206s  RAM=8.4GB
+    1000/1674  elapsed 258s  RAM=10.5GB
+    1200/1674  elapsed 308s  RAM=12.6GB
+    1400/1674  elapsed 359s  RAM=14.7GB
+    1600/1674  elapsed 411s  RAM=16.8GB
+  preload done in 431s, RAM 17.56GB, skipped 0
+  trainable params: 11.16M
+  class weights: [0.6260284185409546, 2.4836795330047607]
+  [R ep1/50] loss=0.6908 val_auc=0.6425 val_bacc=0.6131  t=159s
+  [R ep2/50] loss=0.6614 val_auc=0.7137 val_bacc=0.5965  t=142s
+  [R ep3/50] loss=0.6121 val_auc=0.7506 val_bacc=0.5713  t=142s
+  [R ep4/50] loss=0.5769 val_auc=0.8092 val_bacc=0.7056  t=143s
+  [R ep5/50] loss=0.5727 val_auc=0.7940 val_bacc=0.6049  t=140s
+  [R ep6/50] loss=0.5616 val_auc=0.8206 val_bacc=0.7838  t=140s
+  [R ep7/50] loss=0.5970 val_auc=0.8240 val_bacc=0.6537  t=140s
+  [R ep8/50] loss=0.6181 val_auc=0.7871 val_bacc=0.5347  t=140s
+  [R ep9/50] loss=0.6060 val_auc=0.8248 val_bacc=0.6240  t=141s
+  [R ep10/50] loss=0.5925 val_auc=0.8183 val_bacc=0.6156  t=140s
+  [R ep11/50] loss=0.5554 val_auc=0.8177 val_bacc=0.6289  t=140s
+  [R ep12/50] loss=0.5679 val_auc=0.8174 val_bacc=0.7396  t=140s
+  [R ep13/50] loss=0.4998 val_auc=0.8080 val_bacc=0.7319  t=143s
+  [R ep14/50] loss=0.4656 val_auc=0.8256 val_bacc=0.7586  t=141s
+  [R ep15/50] loss=0.4227 val_auc=0.7807 val_bacc=0.6854  t=139s
+  [R ep16/50] loss=0.3671 val_auc=0.7734 val_bacc=0.7065  t=140s
+  [R ep17/50] loss=0.3451 val_auc=0.7881 val_bacc=0.6922  t=139s
+  [R ep18/50] loss=0.2876 val_auc=0.7648 val_bacc=0.6613  t=140s
+  [R ep19/50] loss=0.3056 val_auc=0.7899 val_bacc=0.6778  t=140s
+  [R ep20/50] loss=0.2908 val_auc=0.7884 val_bacc=0.6728  t=140s
+  [R ep21/50] loss=0.2419 val_auc=0.7606 val_bacc=0.6640  t=140s
+  [R ep22/50] loss=0.1881 val_auc=0.7789 val_bacc=0.6243  t=139s
+  [R ep23/50] loss=0.1892 val_auc=0.7633 val_bacc=0.6751  t=141s
+  [R ep24/50] loss=0.1525 val_auc=0.7710 val_bacc=0.6740  t=140s
+  [R ep25/50] loss=0.1812 val_auc=0.7555 val_bacc=0.6858  t=140s
+  [R ep26/50] loss=0.1288 val_auc=0.7677 val_bacc=0.6686  t=140s
+  [R ep27/50] loss=0.1449 val_auc=0.7736 val_bacc=0.6343  t=140s
+  [R ep28/50] loss=0.1223 val_auc=0.7752 val_bacc=0.6400  t=140s
+  [R ep29/50] loss=0.1337 val_auc=0.7409 val_bacc=0.6648  t=140s
+  [R ep30/50] loss=0.1138 val_auc=0.7622 val_bacc=0.6568  t=140s
+  [R ep31/50] loss=0.0965 val_auc=0.7687 val_bacc=0.6736  t=167s
+  [R ep32/50] loss=0.0784 val_auc=0.7785 val_bacc=0.6606  t=148s
+  [R ep33/50] loss=0.0683 val_auc=0.7550 val_bacc=0.6560  t=140s
+  [R ep34/50] loss=0.0693 val_auc=0.7693 val_bacc=0.6434  t=139s
+  [R ep35/50] loss=0.0894 val_auc=0.7892 val_bacc=0.6812  t=139s
+  [R ep36/50] loss=0.0731 val_auc=0.7866 val_bacc=0.6797  t=140s
+  [R ep37/50] loss=0.0998 val_auc=0.7797 val_bacc=0.6701  t=140s
+  [R ep38/50] loss=0.0299 val_auc=0.7748 val_bacc=0.6598  t=140s
+  [R ep39/50] loss=0.0550 val_auc=0.7815 val_bacc=0.6755  t=139s
+  [R ep40/50] loss=0.0588 val_auc=0.7835 val_bacc=0.6583  t=140s
+  [R ep41/50] loss=0.0539 val_auc=0.7698 val_bacc=0.6583  t=140s
+  [R ep42/50] loss=0.0360 val_auc=0.7767 val_bacc=0.6919  t=139s
+  [R ep43/50] loss=0.0633 val_auc=0.7692 val_bacc=0.6755  t=140s
+  [R ep44/50] loss=0.0401 val_auc=0.7542 val_bacc=0.6297  t=140s
+  [R ep45/50] loss=0.0276 val_auc=0.7445 val_bacc=0.6598  t=140s
+  [R ep46/50] loss=0.0434 val_auc=0.7521 val_bacc=0.6614  t=139s
+  [R ep47/50] loss=0.0440 val_auc=0.7643 val_bacc=0.6282  t=140s
+  [R ep48/50] loss=0.0348 val_auc=0.7638 val_bacc=0.6553  t=140s
+  [R ep49/50] loss=0.0241 val_auc=0.7650 val_bacc=0.6510  t=142s
+  [R ep50/50] loss=0.0320 val_auc=0.7668 val_bacc=0.6594  t=139s
+
+loading test checkpoint: /root/work/cls/best_R.pt
+
+=== TEST RESULTS [R] ===
+  AUC:  0.8403  [95% CI 0.7852, 0.8872]
+  bACC: 0.7178 [95% CI 0.6600, 0.7753]
+STAGE cls R finished in 7725s

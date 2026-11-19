@@ -1,0 +1,41 @@
+{
+ "description": "Order and duration of the classifier runs with synthetic data and of the controls.",
+ "runs": [
+  {
+   "schemes": [
+    "A"
+   ],
+   "hours_left_at_start": 9.81,
+   "hours_needed": 0.8,
+   "status": "done",
+   "hours": 2.34
+  },
+  {
+   "schemes": [
+    "R"
+   ],
+   "hours_left_at_start": 7.47,
+   "hours_needed": 3.0999999999999996,
+   "status": "done",
+   "hours": 2.16
+  },
+  {
+   "schemes": [
+    "T"
+   ],
+   "hours_left_at_start": 5.32,
+   "hours_needed": 2.3,
+   "status": "done",
+   "hours": 1.24
+  },
+  {
+   "schemes": [
+    "S"
+   ],
+   "hours_left_at_start": 4.08,
+   "hours_needed": 3.2,
+   "status": "done",
+   "hours": 2.27
+  }
+ ]
+}

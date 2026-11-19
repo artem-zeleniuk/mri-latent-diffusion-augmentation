@@ -1,0 +1,57 @@
+LOAD_PRETRAINED_UNET=True - skipping Stage 1, the fine-tuned UNet checkpoint downloaded by the quickstart is reused unchanged.
+LOAD_PRETRAINED_UNET=True - skipping Stage 2. The synthetic volumes of the reported classifiers are not downloaded by the quickstart.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 3, the summary cells below use the stored results in ./weights/.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 4, the stored DeLong results in ./weights/ feed the summary cells below.
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+loading fine-tuned pipe ...
+[BrainLDMPipeline] OVERRIDE UNet ← /root/work/out/ckpts/unet_oasis_finetuned_best_ema.pt
+ready
+
+=== cn (1000 samples) ===
+  [50/1000] elapsed=116s ETA=2199s
+  [100/1000] elapsed=226s ETA=2034s
+  [150/1000] elapsed=332s ETA=1880s
+  [200/1000] elapsed=443s ETA=1774s
+  [250/1000] elapsed=559s ETA=1676s
+  [300/1000] elapsed=673s ETA=1570s
+  [350/1000] elapsed=929s ETA=1726s
+  [400/1000] elapsed=1240s ETA=1859s
+  [450/1000] elapsed=1578s ETA=1929s
+  [500/1000] elapsed=1879s ETA=1879s
+  [550/1000] elapsed=2214s ETA=1811s
+  [600/1000] elapsed=2484s ETA=1656s
+  [650/1000] elapsed=2765s ETA=1489s
+  [700/1000] elapsed=3047s ETA=1306s
+  [750/1000] elapsed=3301s ETA=1100s
+  [800/1000] elapsed=3570s ETA=892s
+  [850/1000] elapsed=3854s ETA=680s
+  [900/1000] elapsed=4068s ETA=452s
+  [950/1000] elapsed=4250s ETA=224s
+  [1000/1000] elapsed=4432s ETA=0s
+
+=== ad (1000 samples) ===
+  [50/1000] elapsed=181s ETA=3447s
+  [100/1000] elapsed=364s ETA=3276s
+  [150/1000] elapsed=546s ETA=3095s
+  [200/1000] elapsed=729s ETA=2915s
+  [250/1000] elapsed=910s ETA=2731s
+  [300/1000] elapsed=1093s ETA=2550s
+  [350/1000] elapsed=1274s ETA=2366s
+  [400/1000] elapsed=1456s ETA=2184s
+  [450/1000] elapsed=1637s ETA=2001s
+  [500/1000] elapsed=1820s ETA=1820s
+  [550/1000] elapsed=2001s ETA=1637s
+  [600/1000] elapsed=2183s ETA=1455s
+  [650/1000] elapsed=2365s ETA=1273s
+  [700/1000] elapsed=2546s ETA=1091s
+  [750/1000] elapsed=2728s ETA=909s
+  [800/1000] elapsed=2910s ETA=727s
+  [850/1000] elapsed=3094s ETA=546s
+  [900/1000] elapsed=3275s ETA=364s
+  [950/1000] elapsed=3457s ETA=182s
+  [1000/1000] elapsed=3618s ETA=0s
+
+DONE
+STAGE sample baseline finished in 8064s

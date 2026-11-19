@@ -1,0 +1,7 @@
+LOAD_PRETRAINED_UNET=True - skipping Stage 1, the fine-tuned UNet checkpoint downloaded by the quickstart is reused unchanged.
+LOAD_PRETRAINED_UNET=True - skipping Stage 2. The synthetic volumes of the reported classifiers are not downloaded by the quickstart.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 3, the summary cells below use the stored results in ./weights/.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 4, the stored DeLong results in ./weights/ feed the summary cells below.
+D {"latent_dimension": 33600, "n_train": 1674, "round_trip_error_train": [46.16, 39.72], "validation_round_trip_to_nearest_train": [164.29, 124.11], "validation_to_nearest_train": [156.19, 73.58], "train_to_nearest_session_of_same_subject": [109.25, 28.59], "train_to_nearest_session_of_other_subject": [157.03, 70.67], "synthetic_cn_to_nearest_train": [155.31, 128.71], "synthetic_ad_to_nearest_train": [155.92, 125.12]}
+saved nearest_training_latent -> /root/work/out/results/generator_checks.json
+part D done at 762s

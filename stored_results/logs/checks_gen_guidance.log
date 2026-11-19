@@ -1,0 +1,12 @@
+LOAD_PRETRAINED_UNET=True - skipping Stage 1, the fine-tuned UNet checkpoint downloaded by the quickstart is reused unchanged.
+LOAD_PRETRAINED_UNET=True - skipping Stage 2. The synthetic volumes of the reported classifiers are not downloaded by the quickstart.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 3, the summary cells below use the stored results in ./weights/.
+LOAD_PRETRAINED_CLASSIFIER=True - skipping Stage 4, the stored DeLong results in ./weights/ feed the summary cells below.
+train: 1674 sessions / 747 subjects  (AD=337, CN=1337)
+val  : 397 sessions / 160 subjects  (AD=69, CN=328)
+test : 382 sessions / 161 subjects  (AD=74, CN=308)
+[BrainLDMPipeline] OVERRIDE UNet ← /root/work/out/ckpts/unet_oasis_finetuned_best_ema.pt
+E 2.0 {"ad05": {"csf_c": [0.03441, 6.6], "mean_c": [-0.04447, -7.6], "tissue": [-0.00146, -3.2]}, "ad1": {"csf_c": [0.05988, 6.6], "mean_c": [-0.07257, -7.3], "tissue": [-0.00354, -3.9]}}
+E 4.0 {"ad05": {"csf_c": [0.04487, 4.9], "mean_c": [-0.06484, -5.6], "tissue": [-0.0039, -4.5]}, "ad1": {"csf_c": [0.0957, 4.9], "mean_c": [-0.11462, -5.3], "tissue": [-0.01129, -6.5]}}
+saved guidance_exploration -> /root/work/out/results/generator_checks.json
+part E done at 524s

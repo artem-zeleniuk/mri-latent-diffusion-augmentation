@@ -1,0 +1,40 @@
+{
+ "description": "The intensity proxies of the synthetic class check on 80 AD and 80 CN real training sessions (class means, standard deviations, Cohen's d, AUC), and the age of the two samples in years.",
+ "csf_c": {
+  "ad_mean": 0.16904849360630325,
+  "cn_mean": 0.11975002421854819,
+  "ad_sd": 0.11305788444320072,
+  "cn_sd": 0.14811068593075802,
+  "cohen_d": 0.3741671895273561,
+  "auc_ad_higher": 0.77875
+ },
+ "mean_c": {
+  "ad_mean": 1.0770080204471015,
+  "cn_mean": 1.1330483890895267,
+  "ad_sd": 0.1586448726190697,
+  "cn_sd": 0.20711502513485067,
+  "cohen_d": -0.3037767991120331,
+  "auc_ad_higher": 0.3359375
+ },
+ "tissue": {
+  "ad_mean": 0.4206168736049107,
+  "cn_mean": 0.4154840284075056,
+  "ad_sd": 0.058040809201263935,
+  "cn_sd": 0.07656857692240483,
+  "cohen_d": 0.07555051669055976,
+  "auc_ad_higher": 0.5125
+ },
+ "age": {
+  "ad_mean": 76.58035537060233,
+  "cn_mean": 68.33548926734258,
+  "ad_sd": 8.609252669049702,
+  "cn_sd": 8.845578506257217,
+  "cohen_d": 0.9446222002984185,
+  "auc_ad_higher": 0.73546875
+ },
+ "ad_cdr_counts": {
+  "0.5": 61,
+  "1.0": 19
+ },
+ "csf_c_ad_cdr_ge_1_mean": 0.1613773215815307
+}

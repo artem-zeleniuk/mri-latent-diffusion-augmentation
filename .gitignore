@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Files downloaded or produced when the notebook runs
+weights/
+monai_bundle/
+demo_brains/
+demo_brains.tar.gz
+synth/
+trained/
+trained_unet/
+fake_cache/
+fake_manifest.json
+results/
+
+# Model checkpoints and imaging data (OASIS-3 must never be committed)
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.nii
+*.nii.gz
+*.mgz
+*.tar.gz
+latents_cache/
+labels.json
+*.csv
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Module written by scripts/export_notebook_code.py
+scripts/nbcode.py
